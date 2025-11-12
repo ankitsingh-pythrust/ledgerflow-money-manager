@@ -1,0 +1,4 @@
+:root{--primary-color:#0a5bd3;--accent-color:#00b894;--bg:#ffffff;--text:#0e1a2b}
+html,body{height:100%}
+body{margin:0;font-family:Roboto,'Helvetica Neue',Arial,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+*{box-sizing:border-box}
