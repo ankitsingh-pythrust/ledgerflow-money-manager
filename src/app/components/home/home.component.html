@@ -1,0 +1,282 @@
+<!-- Header (100px height, no action buttons) -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" aria-label="LedgerFlow brand">LEDGERFLOW</div>
+    <nav class="nav-links">
+      <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+      <a href="#how-it-works" (click)="$event.preventDefault(); scrollTo('how-it-works')">How It Works</a>
+      <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')">Plans</a>
+      <a href="#security" (click)="$event.preventDefault(); scrollTo('security')">Security</a>
+      <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')">Testimonials</a>
+    </nav>
+    <div class="burger" role="button" tabindex="0" aria-label="Open menu" (click)="toggleMenu()" (keydown.enter)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </div>
+  </div>
+  <div class="mobile-menu" *ngIf="isMenuOpen">
+    <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+    <a href="#how-it-works" (click)="$event.preventDefault(); scrollTo('how-it-works')">How It Works</a>
+    <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')">Plans</a>
+    <a href="#security" (click)="$event.preventDefault(); scrollTo('security')">Security</a>
+    <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')">Testimonials</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+  <mat-card class="hero-card">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>Take control of your money with LedgerFlow</h1>
+        <p class="sub">Connect your accounts, track spending, stay on budget, and forecast cash flow—without spreadsheets or guesswork.</p>
+        <ul class="bullet-list">
+          <li>Connect to 12,000+ banks with secure, read‑only links</li>
+          <li>Build smart budgets that adapt to your habits</li>
+          <li>Get bill reminders and insights before cash runs low</li>
+        </ul>
+        <div class="cta-row">
+          <button mat-raised-button color="primary" (click)="scrollTo('plans')">Start Free</button>
+          <button mat-stroked-button (click)="scrollTo('how-it-works')">See How It Works</button>
+        </div>
+        <p class="microcopy">Free Basic plan. No credit card required.</p>
+      </div>
+    </div>
+  </mat-card>
+</section>
+
+<!-- About -->
+<section id="about" class="section light">
+  <div class="container">
+    <h2>One app for everyday money decisions</h2>
+    <p class="sub">LedgerFlow simplifies personal and business finances so you can spend confidently and save deliberately.</p>
+    <div class="columns">
+      <mat-card class="info">
+        <ul class="bullet-list">
+          <li>Unified dashboard for accounts, cards, and wallets</li>
+          <li>Automatic categorization with learning rules</li>
+          <li>Exports for taxes and accounting software</li>
+        </ul>
+        <div class="cta-row">
+          <button mat-raised-button color="primary" (click)="scrollTo('features')">Explore Features</button>
+          <button mat-stroked-button (click)="scrollTo('why')">Why LedgerFlow</button>
+        </div>
+        <p class="microcopy">Works on web, iOS, and Android with secure cloud sync.</p>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<!-- Why -->
+<section id="why" class="section">
+  <div class="container">
+    <h2>Clarity, not complexity</h2>
+    <p class="sub">We combine bank‑grade security with proactive insights to cut busywork and prevent costly mistakes.</p>
+    <div class="card-grid">
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>shield</mat-icon></div>
+        <h3>Bank‑grade security</h3>
+        <p>256‑bit encryption, hardware‑backed keys, and mandatory 2FA.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>show_chart</mat-icon></div>
+        <h3>Real‑time insights</h3>
+        <p>Spending trends and cash‑flow projections you can act on.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>bolt</mat-icon></div>
+        <h3>Time‑saving automations</h3>
+        <p>Rules, recurring transfers, and subscription tracking.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>headset_mic</mat-icon></div>
+        <h3>Human support</h3>
+        <p>Finance‑savvy specialists available via chat.</p>
+      </mat-card>
+    </div>
+    <div class="cta-row center">
+      <button mat-raised-button color="primary" (click)="scrollTo('plans')">Get Started</button>
+      <button mat-stroked-button (click)="scrollTo('security')">Read Security Details</button>
+    </div>
+    <p class="microcopy">Your credentials never leave your bank; we use tokenized, read‑only access.</p>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="section light">
+  <div class="container">
+    <h2>Everything you need to manage money with confidence</h2>
+    <p class="sub">From smart budgets to tax‑ready reports, LedgerFlow replaces manual spreadsheets with guided workflows.</p>
+    <div class="card-grid features">
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>link</mat-icon></div>
+        <h3>Secure Bank Sync</h3>
+        <p>Connect checking, savings, credit cards, and wallets with read‑only access.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>tune</mat-icon></div>
+        <h3>Smart Budgets</h3>
+        <p>Adaptive budgets with category caps and rollovers.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>calendar_month</mat-icon></div>
+        <h3>Cash‑Flow Forecast</h3>
+        <p>See expected balances weeks ahead and plan with confidence.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>receipt_long</mat-icon></div>
+        <h3>Bill & Subscription Tracker</h3>
+        <p>Never miss a due date and cancel unused services.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>notifications_active</mat-icon></div>
+        <h3>Insights & Alerts</h3>
+        <p>Real‑time notifications for unusual spend and low balances.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <div class="icon-row"><mat-icon>article</mat-icon></div>
+        <h3>Tax‑Ready Exports</h3>
+        <p>Clean CSV and PDF reports for accountants and DIY filers.</p>
+      </mat-card>
+    </div>
+    <div class="cta-row center">
+      <button mat-raised-button color="primary" (click)="scrollTo('plans')">View Plans</button>
+      <button mat-stroked-button (click)="scrollTo('hero')">Try the Demo</button>
+    </div>
+    <p class="microcopy">Feature availability varies by plan; see Plans for details.</p>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section id="how-it-works" class="section">
+  <div class="container">
+    <h2>Set up in minutes—see value in days</h2>
+    <p class="sub">Connect, categorize, and customize. LedgerFlow does the heavy lifting automatically.</p>
+    <div class="steps-grid">
+      <mat-card class="step-card"><div class="step-num">1</div><h3>Connect accounts</h3><p>Secure, tokenized connections to your banks and cards.</p></mat-card>
+      <mat-card class="step-card"><div class="step-num">2</div><h3>Auto‑categorize</h3><p>Smart rules learn your patterns and improve over time.</p></mat-card>
+      <mat-card class="step-card"><div class="step-num">3</div><h3>Build a budget</h3><p>Set goals and category limits with rollover options.</p></mat-card>
+      <mat-card class="step-card"><div class="step-num">4</div><h3>Forecast & act</h3><p>See upcoming bills and balances, then adjust with confidence.</p></mat-card>
+    </div>
+    <div class="cta-row center">
+      <button mat-raised-button color="primary" (click)="scrollTo('plans')">Connect Your Bank</button>
+      <button mat-stroked-button (click)="scrollTo('hero')">Watch a 2‑Minute Tour</button>
+    </div>
+    <p class="microcopy">You can disconnect accounts anytime from Settings.</p>
+  </div>
+</section>
+
+<!-- Plans & Pricing -->
+<section id="plans" class="section light">
+  <div class="container">
+    <h2>Simple, transparent pricing</h2>
+    <p class="sub">Start free. Upgrade when you need advanced automation and reporting.</p>
+    <div class="plans-grid">
+      <mat-card class="plan-card">
+        <h3>Basic</h3>
+        <div class="price">$0 <span class="per">/ forever</span></div>
+        <ul class="bullet-list">
+          <li>Connect up to 2 institutions</li>
+          <li>Core budgets and categories</li>
+          <li>Bill calendar and reminders</li>
+        </ul>
+        <button mat-stroked-button>Create Free Account</button>
+      </mat-card>
+      <mat-card class="plan-card featured">
+        <h3>Plus</h3>
+        <div class="price">$7.99 <span class="per">/ month</span></div>
+        <ul class="bullet-list">
+          <li>Unlimited institutions</li>
+          <li>Cash‑flow forecasts and goals</li>
+          <li>Advanced alerts and rules</li>
+        </ul>
+        <button mat-raised-button color="primary">Upgrade to Plus</button>
+      </mat-card>
+      <mat-card class="plan-card">
+        <h3>Pro</h3>
+        <div class="price">$15.99 <span class="per">/ month</span></div>
+        <ul class="bullet-list">
+          <li>Multi‑currency and exports</li>
+          <li>Priority support</li>
+          <li>Quarterly planning reports</li>
+        </ul>
+        <button mat-stroked-button>Go Pro</button>
+      </mat-card>
+    </div>
+    <p class="microcopy">Prices in USD; taxes may apply.</p>
+  </div>
+</section>
+
+<!-- Security -->
+<section id="security" class="section">
+  <div class="container">
+    <h2>Your data, protected by design</h2>
+    <p class="sub">We use best‑in‑class security and strict privacy controls—because your money deserves nothing less.</p>
+    <div class="columns">
+      <mat-card class="info">
+        <ul class="bullet-list">
+          <li>256‑bit encryption at rest and in transit</li>
+          <li>Hardware security modules for key management</li>
+          <li>Mandatory 2FA and device/session controls</li>
+          <li>Read‑only bank connections; we can't move money</li>
+        </ul>
+        <div class="cta-row">
+          <button mat-stroked-button (click)="scrollTo('hero')">View Security Whitepaper</button>
+          <button mat-stroked-button (click)="scrollTo('footer')">Privacy Policy</button>
+        </div>
+        <p class="microcopy">We never sell personal data or share it for advertising.</p>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="section light">
+  <div class="container">
+    <h2>Loved by savers and builders</h2>
+    <p class="sub">From first budgets to growing businesses, LedgerFlow helps people make smarter money moves.</p>
+    <div class="card-grid testimonials">
+      <mat-card class="quote-card"><p class="author">Maya R. • <span>Freelance Designer</span></p><p class="quote">“Cash‑flow forecasts finally ended my feast‑or‑famine panic. I plan invoices and taxes with confidence.”</p></mat-card>
+      <mat-card class="quote-card"><p class="author">Devon K. • <span>New Homeowner</span></p><p class="quote">“Bill reminders and category caps helped me save $300 in the first month—no more surprise fees.”</p></mat-card>
+      <mat-card class="quote-card"><p class="author">Alicia T. • <span>Cafe Owner</span></p><p class="quote">“Unlimited bank connections and clean exports made bookkeeping painless during tax season.”</p></mat-card>
+    </div>
+    <div class="cta-row center">
+      <button mat-stroked-button (click)="scrollTo('hero')">Read Case Study</button>
+      <button mat-raised-button color="primary" (click)="scrollTo('plans')">Start Free Today</button>
+    </div>
+    <p class="microcopy">Results vary by user behavior and financial situation.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand">LEDGERFLOW</div>
+      <div class="blurb">LedgerFlow helps you see, plan, and improve your finances with secure syncing, smart budgets, and actionable insights.</div>
+    </div>
+    <div class="footer-links">
+      <div class="col">
+        <div class="col-title">Product</div>
+        <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+        <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')">Plans & Pricing</a>
+        <a href="#security" (click)="$event.preventDefault(); scrollTo('security')">Security & Privacy</a>
+        <a href="#how-it-works" (click)="$event.preventDefault(); scrollTo('how-it-works')">How It Works</a>
+      </div>
+      <div class="col">
+        <div class="col-title">Company</div>
+        <a href="#about" (click)="$event.preventDefault(); scrollTo('about')">About</a>
+        <a href="#" (click)="$event.preventDefault()">Blog</a>
+        <a href="#" (click)="$event.preventDefault()">Careers</a>
+        <a href="#" (click)="$event.preventDefault()">Contact</a>
+      </div>
+      <div class="col">
+        <div class="col-title">Legal</div>
+        <a href="#" (click)="$event.preventDefault()">Privacy Policy</a>
+        <a href="#" (click)="$event.preventDefault()">Terms of Service</a>
+        <a href="#" (click)="$event.preventDefault()">Data Processing Addendum</a>
+      </div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="footer-note">© 2025 ledgerflow-money-manager. All rights reserved.</div>
+</footer>
